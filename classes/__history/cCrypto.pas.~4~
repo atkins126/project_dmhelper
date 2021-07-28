@@ -1,0 +1,57 @@
+unit cCrypto;
+
+interface
+
+uses
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs;
+
+function Encrypt(const aEntrada:string): string;
+function Decrypt(const aEntrada:string): string;
+
+implementation
+
+function Encrypt(const aEntrada:string): string;
+Var i, iEntryQt, iBetween:Integer;
+    sExit:String;
+    sNextChar :String;
+begin
+  iBetween:= 6;
+  i         := 0;
+  iEntryQt  := 0;
+
+  if (aEntrada <> EmptyStr) then
+  begin
+    iEntryQt    := Length(aEntrada);
+    for i  := iEntryQt downto 1 do //Loop Backwards
+    begin
+      sNextChar  := Copy(aEntrada, i, 1);
+      sExit := sExit + (char(ord(sNextChar[1])+iBetween));
+    end;
+  end;
+
+  Result:= sExit;
+end;
+
+function Decrypt(const aEntrada:string): string;
+Var i, iEntryQt, iBetween:Integer;
+    sSaida:String;
+    sProximoCaracter :String;
+begin
+  iIntervalo := 6;
+  i          := 0;
+  iQtdeEnt   := 0;
+  if (aEntrada <> EmptyStr) then begin
+    iQtdeEnt := Length(aEntrada);
+
+    for i := iQtdeEnt downto 1 do
+    begin
+      sProximoCaracter  := Copy(aEntrada, i, 1);
+      sSaida := sSaida + (char(ord(sProximoCaracter[1])-iIntervalo));
+    end;
+  end;
+
+  Result:= sSaida;
+end;
+
+
+end.

@@ -1,0 +1,10 @@
+unit uEnum;
+
+interface
+
+Type
+  TStatus = (ecInsert, ecAlter, ecNone);
+
+implementation
+
+end.

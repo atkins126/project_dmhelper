@@ -1,0 +1,5 @@
+object dtmConnection: TdtmConnection
+  OldCreateOrder = False
+  Height = 221
+  Width = 292
+end

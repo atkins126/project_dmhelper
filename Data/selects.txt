@@ -1,0 +1,38 @@
+SELECT 
+    id,
+    name,
+    description,
+    t.master_username
+FROM 
+    campaign c
+    left join (
+        select 
+            u.id  as master_user_id,
+            u.name as master_username,
+            campaign_id
+        from 
+            user u 
+            inner join user_campaign uc on u.id = uc.user_id 
+        where 
+            u.user_type = 1
+    ) t on  c.id = t.campaign_id;
+    
+
+
+SELECT 
+    id,
+    name,
+    description,
+    (
+        select 
+            u.id 
+        from 
+            user u 
+            inner join user_campaign uc on u.id = uc.user_id 
+        where 
+            u.user_type = 1 and 
+            c.id = uc.campaign_id
+    ) master_user
+FROM 
+    campaign c;
+

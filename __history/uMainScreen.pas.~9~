@@ -1,0 +1,56 @@
+unit uMainScreen;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls;
+
+type
+  TfrmMainScreen = class(TForm)
+    mmScreen: TMainMenu;
+    FerramentasdoMestre1: TMenuItem;
+    PlayerTools1: TMenuItem;
+    InitiativeCounter1: TMenuItem;
+    MonstersNPCs1: TMenuItem;
+    CampaignNotesandWorldbuilding1: TMenuItem;
+    CharacterSheet1: TMenuItem;
+    Rulesets1: TMenuItem;
+    N1: TMenuItem;
+    mnuClose: TMenuItem;
+    Users1: TMenuItem;
+    Registry1: TMenuItem;
+    procedure mnuCloseClick(Sender: TObject);
+    procedure Registry1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMainScreen: TfrmMainScreen;
+
+implementation
+
+{$R *.dfm}
+
+uses uRegUsers;
+
+procedure TfrmMainScreen.Registry1Click(Sender: TObject);
+begin
+  Try
+    frmRegUsers := TTfrmRegUsers.Create(Self);
+    frmRegUsers.ShowModal;
+  Finally
+    frmRegUsers.Release;
+  End;
+end;
+
+procedure TfrmMainScreen.mnuCloseClick(Sender: TObject);
+begin
+  //Close;
+  Application.Terminate;
+end;
+
+end.

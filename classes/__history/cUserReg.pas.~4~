@@ -1,0 +1,38 @@
+unit cUserReg;
+
+interface
+
+uses System.Classes, Vcl.Controls, Vcl.ExtCtrls,Vcl.Dialogs,System.SysUtils,
+     FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+     FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
+     FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, cCrypto;
+
+type
+  TUser = class
+  private
+    dbConnection:TFDConnection;
+    F_id : Integer;
+    F_username : String;
+    F_password : String;
+    function getPassword : String;
+    procedure setPassword(const Value : String);
+
+  public
+    constructor Create(aConnection : TFDConnection);
+    destructor Destroy; override;
+    function Insert : Boolean;
+    function Update : Boolean;
+    function Delete : Boolean;
+    function Select(id:Integer) : Boolean;
+
+  published
+    property id : Integer read F_id write F_id;
+    property username : string read F_username write F_username;
+    property password : string read getPassword write getPassword;
+  end;
+
+implementation
+
+
+
+end.

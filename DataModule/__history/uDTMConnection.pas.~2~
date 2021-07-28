@@ -1,0 +1,26 @@
+unit uDTMConnection;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, ZAbstractConnection, ZConnection;
+
+type
+  TdtmConnection = class(TDataModule)
+    ConnectionDB: TZConnection;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dtmConnection: TdtmConnection;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
