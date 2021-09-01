@@ -1,0 +1,13 @@
+﻿[lblPageName]
+Coordinates=10,10,92,58
+Visible=True
+
+[layoutMain]
+Coordinates=112,10,77,36
+
+[recMain]
+Coordinates=10,78,60,36
+
+[]
+Coordinates=111,1,91,36
+

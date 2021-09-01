@@ -1,0 +1,15 @@
+program proj_dmhelper2;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  uMainScreen in 'uMainScreen.pas' {Form1},
+  DMHelper.View.Styles.Colors in 'View\Styles\DMHelper.View.Styles.Colors.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

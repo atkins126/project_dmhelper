@@ -1,0 +1,56 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'DM Helper'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object layoutMain: TLayout
+    Align = Client
+    Size.Width = 583.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object layoutFull: TLayout
+    Align = Client
+    Size.Width = 583.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object layoutTop: TLayout
+      Align = Top
+      Size.Width = 583.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object recTop: TRectangle
+        Align = Client
+        Fill.Color = claNull
+        Size.Width = 583.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+    end
+  end
+  object layoutMenu: TLayout
+    Align = Left
+    Size.Width = 57.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object recMenu: TRectangle
+      Align = Client
+      Fill.Color = claDarkred
+      Size.Width = 57.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+  end
+end

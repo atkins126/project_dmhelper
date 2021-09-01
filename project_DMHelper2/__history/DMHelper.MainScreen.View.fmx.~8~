@@ -1,0 +1,81 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'DM Helper'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object layoutFull: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object layoutMenu: TLayout
+      Align = Left
+      Size.Width = 60.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object recMenu: TRectangle
+        Align = Client
+        Fill.Color = claNull
+        Size.Width = 60.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object btnPrincipal: TSpeedButton
+        StyledSettings = [Family, Size, Style]
+        Position.Y = 61.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Principal'
+      end
+      object btnUsuario: TSpeedButton
+        StyledSettings = [Family, Size, Style]
+        Position.X = 3.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 54.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Usu'#225'rio'
+      end
+    end
+    object layoutMain: TLayout
+      Align = Client
+      Size.Width = 580.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object recMain: TRectangle
+        Align = Client
+        Fill.Color = claNull
+        Size.Width = 580.000000000000000000
+        Size.Height = 420.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object layoutTop: TLayout
+        Align = Top
+        Size.Width = 580.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object recTop: TRectangle
+          Align = Client
+          Fill.Color = claNull
+          Size.Width = 580.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+    end
+  end
+end
